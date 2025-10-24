@@ -1,5 +1,63 @@
 \chapter{ROS}
-
+\section{Comparision with human body}
+    \begin{table}[h!]
+        \centering
+        \resizebox{\textwidth}{!}{%
+            \begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{8.5cm}|}
+                \hline
+                \textbf{ROS Component}              & \textbf{Role}                          & \textbf{Human Analog}                                                                                               \\
+                \hline
+                \textbf{Nodes}                      & Independent modules                    & \textbf{Organs or neural nuclei} (e.g., basal ganglia, cerebellum, liver)                                           \\
+                \hline
+                \textbf{Topics (Pub/Sub)}           & Broadcast data streams                 & \textbf{Axons or nerve bundles}; broadcast of neural signals between neurons                                        \\
+                \hline
+                \textbf{Messages}                   & Data format / schema                   & \textbf{Patterns of action potentials / neurotransmitters} (information encoding)                                   \\
+                \hline
+                \textbf{Services (Req/Res)}         & Short request–response interaction     & \textbf{Spinal reflexes / point-to-point neural arcs}                                                               \\
+                \hline
+                \textbf{Actions}                    & Long-running task with feedback        & \textbf{Goal-directed behaviors} with continuous feedback (e.g., walking toward a goal; closed-loop motor behavior) \\
+                \hline
+                \textbf{Parameters}                 & Runtime configuration                  & \textbf{Hormones / homeostatic regulators} + “genes/learning” as pre-settings                                       \\
+                \hline
+                \textbf{tf / tf2}                   & Reference frames and transformations   & \textbf{Skeletal structure and proprioception (joint position sensing)}                                             \\
+                \hline
+                \textbf{Sensor drivers}             & Sensor input interfaces                & \textbf{Sensory organs:} eyes (camera), inner ear / vestibular system (IMU), skin (pressure/touch)                  \\
+                \hline
+                \textbf{Actuators / cmd\_vel}       & Output to actuators                    & \textbf{Muscles + motor neurons}                                                                                    \\
+                \hline
+                \textbf{ros\_control / controllers} & Stable feedback controllers            & \textbf{Cerebellum + spinal cord} (fine motor control, PID, balance)                                                \\
+                \hline
+                \textbf{Navigation / Nav2}          & Mapping and path planning              & \textbf{Hippocampus + parietal/occipital cortex} (cognitive map, place and direction cells)                         \\
+                \hline
+                \textbf{MoveIt}                     & Arm motion planning                    & \textbf{Motor/premotor cortex + cerebellum}                                                                         \\
+                \hline
+                \textbf{ROS Master (ROS1)}          & Node naming / discovery service        & \textbf{Thalamus} (central coordinator)                                                                             \\
+                \hline
+                \textbf{DDS (ROS2)}                 & Distributed communication layer        & \textbf{White matter / myelin} (communication network with QoS)                                                     \\
+                \hline
+                \textbf{QoS}                        & Delay and reliability guarantees       & \textbf{Axon diameter / degree of myelination} (speed and reliability of conduction)                                \\
+                \hline
+                \textbf{Clock}                      & Time reference                         & \textbf{Cardiac pacemaker (SA node)} + \textbf{neural rhythms}                                                      \\
+                \hline
+                \textbf{rosbag}                     & Data recording and playback            & \textbf{Hippocampal memory} (replay / recall during sleep)                                                          \\
+                \hline
+                \textbf{diagnostics}                & Health monitoring                      & \textbf{Pain / nociceptors + immune system} (fault and damage detection)                                            \\
+                \hline
+                \textbf{logging}                    & Event logging                          & \textbf{Cortical narrative traces / episodic memory records}                                                        \\
+                \hline
+                \textbf{launch}                     & Scenario or system startup             & \textbf{Daily routines / reflexive initiation behaviors}                                                            \\
+                \hline
+                \textbf{lifecycle manager}          & start / stop / configure state control & \textbf{Brainstem / autonomic nervous system (ANS)} – wakefulness, sleep, arousal                                   \\
+                \hline
+                \textbf{security}                   & Authentication and access restriction  & \textbf{Blood–brain barrier + immune system}                                                                        \\
+                \hline
+                \textbf{namespaces}                 & Separation of functional spaces        & \textbf{Functional brain regions / organ modularity}                                                                \\
+                \hline
+            \end{tabular}
+        }
+        \caption{Mapping between ROS components and their biological analogs in the human body.}
+        \label{tab:ros_human_mapping}
+    \end{table}
 \section{Concepts}
 \url{https://wiki.ros.org/ROS/Concepts}
     \subsection{Filesystem level}
