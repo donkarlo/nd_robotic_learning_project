@@ -1,0 +1,36 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\input{/home/donkarlo/Dropbox/repo/nd_semiotic_project/src/nd_semiotic/language/formal/computer/programming/tex/part/sectioning/additional.tex}
+
+\title{URDF}
+\date{}
+\begin{document}
+    \maketitle
+    Structure
+    base\_link
+         ├── joint1
+         │    └── link1
+         │         └── joint2
+         │              └── link2
+    
+    Each sub tree is a limb
+
+
+
+
+    \begin{minted}{xml}
+        <sdf version="1.6">
+          <model name="robot">
+            <link name="base_link">
+              ...
+            </link>
+          </model>
+        </sdf>
+        
+    \end{minted}
+
+\end{document}

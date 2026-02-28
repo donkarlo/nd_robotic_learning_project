@@ -1,0 +1,35 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+
+\IfFileExists{/home/donkarlo/Dropbox/repo/nd_semiotic_project/src/nd_semiotic/language/formal/computer/programming/tex/part/sectioning/additional.tex}{
+    \input{/home/donkarlo/Dropbox/repo/nd_semiotic_project/src/nd_semiotic/language/formal/computer/programming/tex/part/sectioning/additional.tex}
+}{}
+
+\begin{filecontents*}{\jobname.bib}
+@article{hardt-2013-decay-happens,
+author  = {Hardt, Oliver and Nader, Karim and Nadel, Lynn},
+title   = {Decay Happens: The Role of Active Forgetting in Memory},
+journal = {Trends in Cognitive Sciences},
+year    = {2013},
+volume  = {17},
+number  = {3},
+pages   = {111--120},
+doi     = {10.1016/j.tics.2013.01.001}
+}
+\end{filecontents*}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    A simple citation example \cite{hardt-2013-decay-happens}.
+    
+    \bibliographystyle{plain}
+    \bibliography{\jobname}
+\end{document}

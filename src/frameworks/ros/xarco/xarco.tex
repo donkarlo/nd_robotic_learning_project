@@ -1,0 +1,127 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\input{/home/donkarlo/Dropbox/repo/nd_semiotic_project/src/nd_semiotic/language/formal/computer/programming/tex/part/sectioning/additional.tex}
+
+\title{}
+\date{}
+\begin{document}
+    \maketitle
+    
+    \section{Example}
+        \begin{minted}{xml}
+            <?xml version="1.0"?>
+                <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="simple_quadcopter">
+                
+                  <!-- --------------------
+                       Parameters
+                  --------------------- -->
+                  <xacro:property name="base_mass" value="1.5"/>
+                  <xacro:property name="base_size_x" value="0.35"/>
+                  <xacro:property name="base_size_y" value="0.35"/>
+                  <xacro:property name="base_size_z" value="0.12"/>
+                
+                  <!-- --------------------
+                       Helper macros
+                  --------------------- -->
+                  <xacro:macro name="box_inertial" params="mass x y z">
+                    <inertial>
+                      <mass value="${mass}"/>
+                      <!-- Simple box inertia (approx) -->
+                      <inertia
+                        ixx="${(1.0/12.0) * mass * (y*y + z*z)}"
+                        iyy="${(1.0/12.0) * mass * (x*x + z*z)}"
+                        izz="${(1.0/12.0) * mass * (x*x + y*y)}"
+                        ixy="0" ixz="0" iyz="0"/>
+                    </inertial>
+                  </xacro:macro>
+                
+                  <!-- --------------------
+                       Base link (quadcopter body)
+                  --------------------- -->
+                  <link name="base_link">
+                    <xacro:box_inertial mass="${base_mass}" x="${base_size_x}" y="${base_size_y}" z="${base_size_z}"/>
+                
+                    <collision name="base_collision">
+                      <geometry>
+                        <box size="${base_size_x} ${base_size_y} ${base_size_z}"/>
+                      </geometry>
+                    </collision>
+                
+                    <visual name="base_visual">
+                      <geometry>
+                        <box size="${base_size_x} ${base_size_y} ${base_size_z}"/>
+                      </geometry>
+                    </visual>
+                  </link>
+                
+                  <!-- --------------------
+                       GPS link + joint
+                  --------------------- -->
+                  <link name="gps_link">
+                    <inertial>
+                      <mass value="0.05"/>
+                      <inertia ixx="1e-5" iyy="1e-5" izz="1e-5" ixy="0" ixz="0" iyz="0"/>
+                    </inertial>
+                
+                    <visual name="gps_visual">
+                      <geometry>
+                        <box size="0.04 0.04 0.02"/>
+                      </geometry>
+                    </visual>
+                  </link>
+                
+                  <joint name="gps_joint" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="gps_link"/>
+                    <!-- mounted on top -->
+                    <origin xyz="0 0 ${base_size_z/2.0 + 0.02}" rpy="0 0 0"/>
+                  </joint>
+                
+                  <!-- --------------------
+                       LiDAR link + joint
+                  --------------------- -->
+                  <link name="lidar_link">
+                    <inertial>
+                      <mass value="0.12"/>
+                      <inertia ixx="3e-5" iyy="3e-5" izz="3e-5" ixy="0" ixz="0" iyz="0"/>
+                    </inertial>
+                
+                    <visual name="lidar_visual">
+                      <geometry>
+                        <cylinder radius="0.03" length="0.05"/>
+                      </geometry>
+                    </visual>
+                  </link>
+                
+                  <joint name="lidar_joint" type="fixed">
+                    <parent link="base_link"/>
+                    <child link="lidar_link"/>
+                    <!-- mounted in front-top -->
+                    <origin xyz="0.12 0 ${base_size_z/2.0 + 0.03}" rpy="0 0 0"/>
+                  </joint>
+                
+                  <!-- --------------------
+                       (Optional) Gazebo tags: materials + sensor placeholders
+                       This is only a placeholder; actual Gazebo sensor plugins depend on your setup.
+                  --------------------- -->
+                  <gazebo reference="base_link">
+                    <material>Gazebo/Grey</material>
+                  </gazebo>
+                
+                  <gazebo reference="gps_link">
+                    <material>Gazebo/Black</material>
+                    <!-- Placeholder: real GPS in Gazebo usually uses a plugin -->
+                  </gazebo>
+                
+                  <gazebo reference="lidar_link">
+                    <material>Gazebo/Black</material>
+                    <!-- Placeholder: real LiDAR uses a ray sensor + plugin -->
+                  </gazebo>
+                
+                </robot>
+        \end{minted}
+\end{document}

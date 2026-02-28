@@ -1,0 +1,115 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+
+\title{Crazy fly}
+\date{}
+\begin{document}
+    \maketitle
+    
+    
+    \section{Crazyflie 2.1+ Overview}
+        
+        \textbf{Platform:} Crazyflie 2.1+ is a palm-sized open-source micro quadcopter designed primarily for research and development rather than consumer applications.
+        
+        \subsection{Physical Characteristics}
+            
+            \begin{itemize}
+                \item Weight: approximately 29 grams
+                \item Motor-to-motor distance: approximately 92 mm
+                \item Fully palm-sized form factor
+            \end{itemize}
+        
+        \subsection{Onboard Sensors (IMU)}
+            
+            The main board includes:
+            
+            \begin{itemize}
+                \item 3-axis accelerometer and 3-axis gyroscope (BMI088)
+                \item 3-axis magnetometer
+                \item Barometer (BMP388)
+            \end{itemize}
+            
+            These sensors enable state estimation, attitude control, and onboard filtering (e.g., EKF).
+        
+        \subsection{Processing Units}
+            
+            \begin{itemize}
+                \item STM32F405 (Cortex-M4) for flight control
+                \item nRF51822 for radio communication
+            \end{itemize}
+        
+        \subsection{Communication Interfaces}
+            
+            \begin{itemize}
+                \item 2.4 GHz radio communication (Crazyradio)
+                \item USB interface
+                \item Optional WiFi via AI Deck
+            \end{itemize}
+        
+        \subsection{Expansion Capability (Deck System)}
+            
+            Crazyflie uses a modular expansion deck system, allowing additional hardware to be mounted directly on top of the platform.
+            
+            \subsubsection{Multi-Ranger Deck}
+            
+            \begin{itemize}
+                \item Five Time-of-Flight (ToF) laser sensors
+                \item Measures distance in front, back, left, right, and upward directions
+                \item Range up to approximately 4 meters
+                \item Functions as a lightweight multi-directional ranging system
+                \end{itemize}
+            
+            \subsubsection{Flow Deck v2}
+            
+            \begin{itemize}
+                \item Optical flow sensor
+                \item Downward-facing ToF sensor for altitude measurement
+                \item Enables stable indoor flight without GPS
+                \end{itemize}
+            
+            \subsubsection{AI Deck 1.1}
+            
+            \begin{itemize}
+                \item GAP8 RISC-V processor
+                \item 320×320 monochrome camera (Himax HM01B0)
+                \item ESP32 for WiFi connectivity
+                \item Supports onboard AI workloads and custom vision processing
+                \end{itemize}
+        
+        \subsection{Software Characteristics}
+            
+            \begin{itemize}
+                \item Fully open-source firmware
+                \item Python API available
+                \item Firmware-level modification possible
+                \item Compatible with ROS
+                \item Simulation support (e.g., Gazebo)
+            \end{itemize}
+        
+        \subsection{Advantages}
+            
+            \begin{itemize}
+                \item Extremely lightweight and compact
+                \item Fully programmable at firmware level
+                \item Modular sensor expansion
+                \item Suitable for swarm research
+                \item Suitable for indoor autonomy experiments
+            \end{itemize}
+        
+        \subsection{Limitations}
+            
+            \begin{itemize}
+                \item Very limited payload capacity
+                \item Short flight time (approximately 7–10 minutes)
+                \item Poor wind resistance
+                \item Ranging sensors are ToF-based rather than scanning LiDAR
+            \end{itemize}
+        
+        \subsection{Conclusion}
+            
+            For a minimal fully-programmable quadcopter platform with onboard IMU, expandable ranging sensors, and optional camera-based AI processing, Crazyflie 2.1+ with Multi-Ranger and AI Deck represents one of the smallest practical research platforms currently available.
+
+\end{document}

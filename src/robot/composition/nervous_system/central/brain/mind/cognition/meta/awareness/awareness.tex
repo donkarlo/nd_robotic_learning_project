@@ -1,0 +1,26 @@
+
+
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\input{/home/donkarlo/Dropbox/repo/nd_semiotic_project/src/nd_semiotic/language/formal/computer/programming/tex/part/sectioning/additional.tex}
+
+\title{}
+\date{}
+\begin{document}
+    \maketitle
+    \begin{minted}{python}
+        from enum import IntEnum, auto
+    
+    
+        class Awareness(IntEnum):
+            I_HAVE_ACTUATORS = auto()
+            I_HAVE_SENSORS = auto()
+            I_CAN_REMEMBER_EACH_SENSOR_MODALITY_INDEPENDENTLY = auto()
+        pass
+    \end{minted}
+    
+\end{document}
