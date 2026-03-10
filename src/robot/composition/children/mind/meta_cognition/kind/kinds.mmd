@@ -1,0 +1,26 @@
+flowchart TD
+    A[Metacognition] --> B[Metacognitive Knowledge]
+    A --> C[Metacognitive Regulation / Control]
+    A --> D[Metacognitive Experiences & Judgments]
+    B --> B1[Declarative: what/that]
+    B --> B2[Procedural: how]
+    B --> B3[Conditional: when/why]
+    C --> C1[Planning]
+    C --> C2[Monitoring]
+    C --> C3[Debugging / Error correction]
+    C --> C4[Evaluation]
+    C --> C5[Strategy selection & resource allocation]
+    D --> D1[Prospective judgments: EOL, JOL, FOK]
+    D --> D2[Retrospective judgments: confidence]
+    D --> D3[Metacognitive feelings: difficulty, familiarity, TOT]
+    E[Object-level cognition: perception, memory, reasoning, action] -->|monitoring signals| F[Meta-level model]
+    F -->|control signals| E
+    G[Social / collaborative context] --> A
+    G --> H[Metacognitive dialogue and socially shared regulation]
+    I[Domain dimension] --> J[Domain-specific components]
+    I --> K[Domain-general components]
+    J --> A
+    K --> A
+%% Optional: to force manual wrapping, replace long node text with <br>
+%% Example:
+%% E[Object-development_stages cognition<br>perception, memory, reasoning, action] -->|monitoring signals| F[Meta-development_stages model]

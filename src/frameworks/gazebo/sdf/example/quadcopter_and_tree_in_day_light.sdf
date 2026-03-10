@@ -136,7 +136,7 @@
           </material>
         </visual>
 
-        <!-- IMU sensor -->
+        <!-- IMU sensory -->
         <sensor name="imu_sensor" type="imu">
           <always_on>true</always_on>
           <update_rate>200</update_rate>
@@ -163,7 +163,7 @@
           </plugin>
         </sensor>
 
-        <!-- GPS sensor (Gazebo "navsat") -->
+        <!-- GPS sensory (Gazebo "navsat") -->
         <sensor name="gps_sensor" type="navsat">
           <always_on>true</always_on>
           <update_rate>10</update_rate>
@@ -248,7 +248,7 @@
         <child>lidar_link</child>
       </joint>
 
-      <!-- Aerodynamics / flight control is intentionally omitted (this is a sensor-ready SDF example). -->
+      <!-- Aerodynamics / flight control is intentionally omitted (this is a sensory-ready SDF example). -->
     </model>
   </world>
 </sdf>
