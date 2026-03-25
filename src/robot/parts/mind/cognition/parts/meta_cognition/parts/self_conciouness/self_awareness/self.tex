@@ -1,0 +1,100 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{tikz}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Self}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	\section{Neural basis of self}
+		\seehere{https://en.wikipedia.org/wiki/Neural_basis_of_self}
+	
+	\section{From autobiographical memory}
+		In \cite{brewer-1986-what-is-autobiographical-memory} page 26, the parts of self is mentioned and is summarized as
+		The working self, often referred to as just the 'self', is a set of active personal goals or self-images organized into goal hierarchies. These personal goals and self-images work together to modify cognition and the resulting behavior so an individual can operate effectively in the world.
+		\seehere{https://en.wikipedia.org/wiki/Autobiographical_memory?utm_source=chatgpt.com\#Working_self}
+	
+	\cite{brewer-1986-what-is-autobiographical-memory} includes the self in the following hierarchy:
+	
+	\begin{figure}[H]
+		\centering
+		\begin{forest}
+			for tree={
+				grow=south,
+				align=center
+			}
+			[Individual
+				[Self
+					[Ego\\(experience stream)]
+					[Self-schema\\(knowledge about self)]
+					[Autobiographical memory\\(episodes + facts)]
+				]
+			]
+		\end{forest}
+	\end{figure}
+	
+	\begin{itemize}
+		\item \textbf{Autobiographical memory}
+		\begin{itemize}
+			\item Defined as memory for information related to the self.
+		\end{itemize}
+		
+		\item \textbf{Structure of the self}
+		\begin{itemize}
+			\item The self consists of:
+			\begin{itemize}
+				\item an experiencing ego,
+				\item a self-schema,
+				\item and associated personal memories and autobiographical facts.
+			\end{itemize}
+		\end{itemize}
+		
+		\item \textbf{Ego}
+		\begin{itemize}
+			\item The conscious experiencing entity.
+			\item Represents moment-to-moment subjective experience.
+			\item Personal memories correspond to the ego’s experiences over time.
+		\end{itemize}
+		
+		\item \textbf{Self-schema}
+		\begin{itemize}
+			\item A cognitive structure containing general knowledge about the self.
+			\item Organized, relatively stable, and partly unconscious.
+			\item Integrates private and publicly observable information about the self.
+		\end{itemize}
+		
+		\item \textbf{Self}
+		\begin{itemize}
+			\item A complex structure including ego, self-schema, and self-related long-term memories.
+		\end{itemize}
+		
+		\item \textbf{Individual}
+		\begin{itemize}
+			\item A broader entity including the self, body, depersonalized knowledge, and various cognitive and motor skills.
+		\end{itemize}
+	\end{itemize}
+
+	\bibliographystyle{plain}
+	\bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+
+\end{document}
