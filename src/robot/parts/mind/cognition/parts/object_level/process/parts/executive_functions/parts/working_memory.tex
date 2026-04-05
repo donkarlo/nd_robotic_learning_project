@@ -1,0 +1,96 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Working memory}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    
+    \clickurlfooter{https://en.wikipedia.org/wiki/Working_memory} defines working memory as a cognitive system with a limited capacity that can hold information temporarily
+    and mentions the following functions for working memory
+    \begin{itemize}
+        \item Temporary storage of information
+        \item Manipulation of stored information
+        \item Support for reasoning
+        \item Guidance of decision-making and behavior
+        \item Direction of attention toward relevant information
+        \item Suppression of irrelevant information and inappropriate actions
+        \item Coordination among multiple processes when more than one task is performed simultaneously
+    \end{itemize}
+    
+    
+    \section{Theories}
+        \cite{baddeley-1974-working-memory} argue that short-term retention is not a single passive store but part of a broader working memory system. They propose that this system temporarily holds and processes information needed for reasoning, comprehension, and learning. Their account distinguishes a control component from temporary storage mechanisms, instead of treating short-term memory as one unitary box. The chapter uses experimental evidence from several tasks to show that immediate memory limits do not fully explain complex cognitive performance. Overall, the paper lays the foundation for viewing working memory as an active, limited-capacity system that supports ongoing cognition.
+        the functions in the previous section can be reformulated by \cite{baddeley-1974-working-memory} memory as follows:
+        \begin{itemize}
+            \item \textbf{Central executive:} controls attention, suppresses irrelevant information, and coordinates concurrent processes and tasks
+            \item \textbf{Phonological loop:} temporarily stores auditory and verbal information and refreshes it through rehearsal
+            \item \textbf{Visuospatial sketchpad:} temporarily stores and manipulates visual and spatial information, such as mental imagery and mental maps
+            \item \textbf{Episodic buffer:} integrates phonological, visual, and spatial information and links working memory with long-term memory
+        \end{itemize}
+        
+        
+        see \cite{cowan-2017-the-many-faces-of-working-memory}
+        
+        \cite{eriksson-2015-neurocognitive-architecture-of-working-memory} says that gola and task set (that we call actions are stored in working memory), see see Fig.~1 of \cite{eriksson-2015-neurocognitive-architecture-of-working-memory}
+    
+    
+    \section{Planning and working memory}
+        
+        \cite{desposito-2015-the-cognitive-neuroscience-of-working-memory} argues that working memory is the system that keeps task-relevant information active so behavior can be guided when the needed information is not currently in the environment. It explicitly links working memory to plans, goals, and intentions: multiple plans or parts of a plan can be held at once, and interrupted plans remain active so they can later be resumed. Its main view is that the prefrontal cortex does not simply store sensory content; rather, it maintains abstract goals, rules, and task structure and sends top-down control signals that bias action selection. So, in this paper, cognition is goal-directed control: working memory holds and prioritizes goal-relevant representations, while prefrontal systems use them to organize and guide actions.
+        
+        \cite{das-2015-three-faces-of-cognitive-processes-theory-assessment-and-intervention}  presents the PASS model, which treats cognition as a set of distinct processes: Planning, Attention, Simultaneous processing, and Successive processing. It describes planning as a broad metacognitive and executive function involving decision making, judgment, and organizing behavior toward a goal. The author argues that planning is broader than working memory and explicitly says that limited-capacity working memory cannot contain future planning or a person’s major life goals.
+        So, in this view, working memory supports some cognitive operations, but planning is a higher-level process that goes beyond temporary storage and updating.
+    
+    
+    \section{Working memory and awarness}
+        \cite{gutzwiller-2013-the-role-of-working-memory-in-levels-of-situation-awareness} examines how working memory relates to different levels of situation awareness in a dynamic decision-making task. Using three working-memory tasks, the authors built a factor-based working-memory measure and tested it in a firefighting simulation. They found no significant relationship between working memory and Level 1 situation awareness, which mainly involved detecting and recalling environmental elements. However, working memory was significantly related to Level 3 situation awareness, especially for prediction-oriented and implicit awareness measures. The study concludes that working memory contributes more to higher-level predictive awareness than to basic perceptual awareness.
+    
+    
+    
+    \section{Working memory and motor control}
+        \cite{marvel-2019-how-the-motor-system-integrates-with-working-memory}
+        
+        \cite{mcdougle-2026-motor-working-memory}
+    
+    \section{Working memory and attention}
+    
+        \cite{oberauer-2019-working-memory-and-attention-a-conceptual-analysis-and-review}
+    
+    
+    \section{Working memory and perception}
+        \cite{wilkes-2005-working-memory-and-perception} treats perception as a functional module in a robotic cognitive architecture, not as a specifically localized brain region.
+        This perceptual module identifies objects and events in the robot’s environment and supplies information to working memory, short-term memory, and spatial reasoning.
+        Its processes can also be guided by working memory, short-term memory, and long-term memory, making perception part of a bidirectional system.
+        In contrast, the paper links working memory more explicitly to neuroscience, especially computational models of prefrontal cortex circuits.
+        So, in this article, perception is described mainly as an interacting cognitive module rather than as a named part of the brain or mind.
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

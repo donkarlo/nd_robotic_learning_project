@@ -1,0 +1,53 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Goal}
+\date{}
+
+\begin{document}
+    \maketitle
+    A goal or objective is an idea of the future or desired result that a person or a group of people envision, plan, and commit to achieve. \seehere{https://en.wikipedia.org/wiki/Goal}
+    
+    \cite{trapp-2017-commentary-on-the-joys-of-perceiving-affect-as-feedback-for-perceptual-predictions} discusses predictive coding and the idea that the brain minimizes surprise using internal models. It addresses the “dark room problem” by introducing affect as a motivational signal. Positive affect is proposed to arise from successful predictions, especially under uncertainty. This framework links perception with reinforcement learning and the exploration–exploitation dilemma. It suggests that novelty is intrinsically rewarding because it can increase positive affect.
+    
+    \cite{sternson-2013-hypothalamic-survival-circuits-blueprints-for-purposive-behaviors} reviews how hypothalamic neural circuits generate goal-directed behaviors essential for survival, such as feeding, aggression, and reproduction.
+    It shows that small, molecularly defined neuron populations (e.g., AGRP neurons) can rapidly trigger complex motivated behaviors when activated.
+    It proposes that survival needs provide entry points to map neural circuits linking internal states to behavioral intent and intensity.
+    
+    
+    \section{Goal seeking}
+        \cite{kerr-2017-biological-goal-seeking} presents a biologically inspired approach to goal-seeking behavior in autonomous agents. It models how agents can move toward goals while avoiding obstacles using simple, reactive mechanisms. The method combines elements like potential fields and finite-state control to generate adaptive behavior.
+        It demonstrates how complex navigation can emerge from relatively simple rules without global planning. The work is evaluated in scenarios such as dynamic environments and predator–prey interactions.
+        
+    \section{Motor goal}
+        A motor goal is a neurally planned motor outcome that is used to organize motor control.
+        \seeherefooter{https://en.wikipedia.org/wiki/Motor_goal}
+        
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

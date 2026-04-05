@@ -1,0 +1,41 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    
+    \section{Cognitive control}
+        \cite{badre-2025-cognitive-control} argues that cognitive control is the system that enables flexible, goal-directed behavior by selecting actions according to context and by monitoring behavior to adjust it when needed. A central claim of the paper is that control depends strongly on how tasks are represented, especially whether they are encoded compositionally or as integrated conjunctive representations. Compositional representations support generalization and rapid learning of new tasks, but they are more vulnerable to interference and multitasking costs.
+        Conjunctive representations reduce interference and support efficient action selection, but they are less suited for flexible transfer to new situations. The paper concludes that cognitive control emerges from the interaction between representational structure and feedback mechanisms such as monitoring errors, conflict, context, and outcomes
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}
