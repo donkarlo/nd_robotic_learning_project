@@ -1,0 +1,89 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Remebering event specific}
+\date{}
+
+\begin{document}
+    \maketitle
+    \cite{conway-2000-the-construction-of-autobiographical-memories-in-the-self-memory-system} says the process of remembering an event specific knowledge is as follows by order (This paper is the base paper for remebering event specific knowledge)
+    \begin{enumerate}
+        \item \textbf{WillingToRemember}\\
+        The system intentionally initiates an attempt to recall a past experience.
+        
+        \item \textbf{RetrievalModeEntering}\\
+        The mind enters a retrieval state in which memory construction becomes the current active task.
+        
+        \item \textbf{WorkingSelfGoalsActivating}\\
+        Current self-related goals become active and constrain what kind of memory can be searched for and accepted.
+        
+        \item \textbf{CueElaborating}\\
+        The initial cue is expanded and refined to make it more effective for accessing autobiographical knowledge.
+        
+        \item \textbf{VerificationCriteriaSetting}\\
+        The system sets criteria for what will count as an acceptable retrieved memory.
+        
+        \item \textbf{RetrievalModelBuilding}\\
+        A retrieval model is formed that combines cues, goals, and criteria to guide the search process.
+        
+        \item \textbf{KnowledgeBaseSearching}\\
+        The autobiographical knowledge base is searched through spreading activation and controlled access.
+        
+        \item \textbf{GeneralEventAccessing}\\
+        General event knowledge is typically accessed first, providing an initial structured entry point into memory.
+        
+        \item \textbf{StableMemoryPatternForming}\\
+        A stable activation pattern is formed across relevant autobiographical knowledge structures.
+        
+        \item \textbf{EventSpecificKnowledgeActivating}\\
+        Event-specific knowledge is activated, making detailed information about the target event available.
+        
+        \item \textbf{SensoryDetailsRetrieving}\\
+        Sensory-perceptual details such as imagery, sounds, feelings, or other experiential fragments enter awareness.
+    \end{enumerate}
+    
+    
+    A probabale data flow from goal to planning
+    
+    \begin{verbatim}
+SurvivalGoal
+        ↓
+        PlanningNeed
+        ↓
+        AutobiographicalMemoryRetrieval
+        ↓
+        RememberingMode
+        ├── ConceptualRemembering
+        └── PerceptualRemembering
+        ↓
+        Planning
+    \end{verbatim}
+    
+    
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

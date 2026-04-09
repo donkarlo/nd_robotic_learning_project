@@ -248,7 +248,7 @@
         <child>lidar_link</child>
       </joint>
 
-      <!-- Aerodynamics / flight control is intentionally omitted (this is a sensory-ready SDF example). -->
+      <!-- Aerodynamics / flight control_theory is intentionally omitted (this is a sensory-ready SDF example). -->
     </model>
   </world>
 </sdf>
