@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    The efficient coding hypothesis was proposed by Horace Barlow in 1961 as a theoretical model of sensory neuroscience in the brain. Within the brain, neurons communicate with one another by sending electrical impulses referred to as action potentials or spikes.
+    
+    Barlow hypothesized that the spikes in the sensory system formed a neural code for efficiently representing sensory information. By efficient it is understood that the code minimized the number of spikes needed to transmit a given signal. This is somewhat analogous to transmitting information across the internet, where different file formats can be used to transmit a given image. Different file formats require different numbers of bits for representing the same image at a given distortion level, and some are better suited for representing certain classes of images than others. According to this model, the brain is thought to use a code which is suited for representing visual and audio information which is representative of an organism's natural environment .
+    \seeherefooter{https://en.wikipedia.org/wiki/Efficient_coding_hypothesis}
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

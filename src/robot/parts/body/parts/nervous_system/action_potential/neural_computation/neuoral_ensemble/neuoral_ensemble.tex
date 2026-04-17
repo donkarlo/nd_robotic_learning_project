@@ -1,11 +1,40 @@
-\documentclass[a4paper]{standalone}
+\documentclass[a4paper]{article}
+
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
-\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
 
-\title{Neuronal ensemble}
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Neural ensemble}
+\date{}
+
 \begin{document}
     \maketitle
+    
     \url{https://en.wikipedia.org/wiki/Neuronal_ensemble}
-    A neuronal ensemble is a population of nervous system cells (or cultured neurons) involved in a particular neural computation.
+    A neuronal ensemble is a population of nervous system cells (neurons) (or cultured neurons) involved in a particular neural computation.
+    
+    an alternative is \clickurlfooter{https://en.wikipedia.org/wiki/Grandmother_cell}  is a hypothetical neuron that represents a complex but specific concept or object.
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
 \end{document}

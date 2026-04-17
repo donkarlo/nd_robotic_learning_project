@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    
+    \section{FitzHugh–Nagumo model}
+        
+        The FitzHugh–Nagumo model (FHN) describes a prototype of an excitable system (e.g., a neuron).
+        \[
+            \dot{v} = c\left(v - \frac{v^{3}}{3} + w + I\right)
+        \]
+        
+        \[
+            \dot{w} = -\frac{1}{c}\left(v - a + bw\right)
+        \]
+        
+        \cite{cebrian-lacasa-2025-six-decades-of-the-fitzhugh-nagumo-model-a-guide-through-its-spatio-temporal-dynamics-and-influence-across-disciplines} reviews  surveys sixty years of research on the FitzHugh–Nagumo model as a simplified but powerful description of excitable dynamics.
+        It shows that the model captures not only neuronal excitability and oscillations, but also bistability, traveling waves, synchronization, and spatial pattern formation.
+        The paper emphasizes that the model has become useful far beyond neuroscience, including cardiac dynamics, biology, electronics, optics, mathematics, and physics.
+        Its main contribution is to organize the known dynamical regimes and bifurcations of the model, especially in spatially extended and coupled systems.
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

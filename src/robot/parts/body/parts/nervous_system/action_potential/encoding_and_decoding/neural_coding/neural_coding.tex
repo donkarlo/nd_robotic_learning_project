@@ -1,8 +1,42 @@
-\documentclass[a4paper]{standalone}
+\documentclass[a4paper]{article}
+
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
-\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Neural coding}
+\date{}
 
 \begin{document}
-    Neural coding (or neural representation) refers to the relationship between a stimulus and its respective neuronal responses, and the signaling relationships among networks of neurons in an ensemble. \url{https://en.wikipedia.org/wiki/Neural_coding}
+    \maketitle
+    
+    Neural coding (or neural representation) refers to the relationship between a stimulus and its respective neuronal responses, and the signaling relationships among networks of neurons in an ensemble. \seeherefooter{https://en.wikipedia.org/wiki/Neural\_coding}
+    
+    \cite{shimazaki-2025-neural-coding-foundational-concepts-statistical-formulations-and-recent-advances} explains neural coding as the process by which stimuli are transformed into neural activity that supports perception and behavior, combining classical concepts with statistical encoding and decoding frameworks. It emphasizes that neural information is often represented at the population level, where firing rates, temporal structure, and correlations between neurons jointly affect how accurately stimuli can be encoded and decoded. The paper also reviews recent large-scale recording studies, showing that understanding information limits in neural populations now depends on analyzing high-dimensional covariance structure rather than only small-scale pairwise correlations.
+    
+    
+    
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
 \end{document}
