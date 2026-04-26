@@ -20,7 +20,7 @@
 \input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
 
 % for tags
-\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kinds/semtag/semtag.tex}
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
 
 % for links
 \input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
@@ -43,10 +43,57 @@
             \dot{w} = -\frac{1}{c}\left(v - a + bw\right)
         \]
         
-        \cite{cebrian-lacasa-2025-six-decades-of-the-fitzhugh-nagumo-model-a-guide-through-its-spatio-temporal-dynamics-and-influence-across-disciplines} reviews  surveys sixty years of research on the FitzHugh–Nagumo model as a simplified but powerful description of excitable dynamics.
+        \cite{cebrian-lacasa-2025-six-decades-of-the-fitzhugh-nagumo-model-a-guide-through-its-spatio-temporal-dynamics-and-influence-across-disciplines} reviews surveys sixty years of research on the FitzHugh–Nagumo model as a simplified but powerful description of excitable dynamics.
         It shows that the model captures not only neuronal excitability and oscillations, but also bistability, traveling waves, synchronization, and spatial pattern formation.
         The paper emphasizes that the model has become useful far beyond neuroscience, including cardiac dynamics, biology, electronics, optics, mathematics, and physics.
         Its main contribution is to organize the known dynamical regimes and bifurcations of the model, especially in spatially extended and coupled systems.
+        
+        \cite{rueda-2021-a-novel-wave-decomposition-for-oscillatory-signals} and \cite{rodriguez-collado-2021-identification-of-action-potential-waveforms} propose a wave decomposition method for oscillatory signals based on Frequency Modulated Möbius (FMM) waves. The method represents complex oscillatory patterns as a sum of interpretable wave components with parameters controlling amplitude, phase, location, and shape. For your use, its main value is that it provides a citable mathematical basis for approximating signal waveforms, including action-potential-like curves.
+        
+        \begin{equation}
+            
+            
+            V(t)
+            =
+            M
+            +
+            A
+            \cos\left[
+                    \beta
+                    +
+                    2 \arctan\left(
+                                 \omega
+                                 \tan\left(\frac{t-\alpha}{2}\right)
+                \right)
+            \right]
+        
+        
+        \end{equation}
+        
+        \begin{itemize}
+            \item $V(t)$ is the signal value at time $t$. In the case of an action potential, it represents the membrane voltage at time $t$.
+            
+            \item $t$ is time.
+            
+            \item $M$ is the baseline or vertical offset of the signal. It shifts the whole waveform upward or downward.
+            
+            \item $A$ is the amplitude parameter. It controls the vertical scale of the waveform.
+            
+            \item $\alpha$ is the location parameter. It controls the horizontal position of the waveform on the time axis.
+            
+            \item $\beta$ is the phase parameter. It controls the phase shift of the waveform.
+            
+            \item $\omega$ is the shape parameter. It controls the sharpness, skewness, and temporal deformation of the waveform.
+            
+            \item $\cos(\cdot)$ is the cosine function used to generate the oscillatory waveform.
+            
+            \item $\arctan(\cdot)$ is the inverse tangent function used inside the phase transformation.
+            
+            \item $\tan(\cdot)$ is the tangent function used to transform the time variable before applying the inverse tangent.
+            
+            \item $\beta + 2 \arctan\left(\omega \tan\left(\frac{t-\alpha}{2}\right)\right)$ is the phase function of the FMM wave. It determines how the oscillation evolves over time.
+        \end{itemize}
+        
         \bibliographystyle{plainnat}
         \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
 \end{document}
