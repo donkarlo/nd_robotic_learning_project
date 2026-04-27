@@ -29,8 +29,35 @@
 \date{}
 
 \begin{document}
-\maketitle
-     is an advanced method of process control that is used to control a process while satisfying a set of constraints. \seeherefooter{https://en.wikipedia.org/wiki/Model_predictive_control}
+    \maketitle
+    is an advanced method of process control that is used to control a process while satisfying a set of constraints. \seeherefooter{https://en.wikipedia.org/wiki/Model\_predictive\_control}
+    
+    \section{Cost function}
+    \[
+        J =
+        \sum_{k=0}^{N-1}
+        \left[
+            \left( x_k - x_k^{\mathrm{ref}} \right)^{T}
+            Q
+            \left( x_k - x_k^{\mathrm{ref}} \right)
+            +
+            u_k^{T} R u_k
+        \right]
+    \]
+    
+    \begin{where}
+        \item[$J$] is the total cost function to be minimized.
+        \item[$k$] is the discrete time-step index.
+        \item[$N$] is the prediction horizon length.
+        \item[$x_k$] is the system state at time step $k$.
+        \item[$x_k^{\mathrm{ref}}$] is the reference state at time step $k$.
+        \item[$x_k - x_k^{\mathrm{ref}}$] is the state tracking error at time step $k$.
+        \item[$(\cdot)^T$] denotes the transpose operator.
+        \item[$Q$] is the state-error weighting matrix.
+        \item[$u_k$] is the control input at time step $k$.
+        \item[$R$] is the control-input weighting matrix.
+        \item[$u_k^T R u_k$] is the control-effort penalty.
+    \end{where}
     %\bibliographystyle{plainnat}
     %\bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
 \end{document}

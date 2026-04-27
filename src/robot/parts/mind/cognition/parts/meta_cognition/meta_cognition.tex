@@ -1,21 +1,45 @@
 \documentclass[a4paper]{article}
+
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
-\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
 
-\title{Meta cognition}
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{}
 \date{}
+
 \begin{document}
     \maketitle
-    Metacognition is an awareness of one's thought processes and an understanding of the patterns behind them.
+    \cite{metcalfe-1994-metacognition-knowing-about-knowing} defines metacognition is an awareness of one's thought processes and an understanding of the patterns behind them.
     \url{https://en.wikipedia.org/wiki/Metacognition}
     
     Also this book for a neuro science perspective
     \url{https://link.springer.com/book/10.1007/978-3-642-45190-4}
     \\
     \url{https://www.amazon.de/-/en/Cognitive-Neuroscience-Metacognition-Stephen-Fleming/dp/3662511711}
+    
     \paragraph{Image}
-    \includegraphics[scale=1]{meta.png}
+        \includegraphics[scale=1]{meta.png}
     
     
     \section{Metacognitive Knowledge}
@@ -103,6 +127,6 @@
     
     \paragraph{Examples}
         I know that I don't know
-    
-        
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
 \end{document}

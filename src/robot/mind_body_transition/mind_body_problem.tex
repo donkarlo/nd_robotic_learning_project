@@ -1,19 +1,43 @@
 \documentclass[a4paper]{article}
+
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb}
-\usepackage{hyperref}
 \usepackage{minted}
 \usepackage{multirow}
 \usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
 
 \title{}
 \date{}
 
 \begin{document}
     \maketitle
-
+    
+    Cehvck for dualism
+    
     The mind–body problem is a philosophical problem concerning the relationship between thought and consciousness in the human mind and body. It addresses the nature of consciousness, mental states, and their relation to the physical brain and nervous system.
     \url{https://en.wikipedia.org/wiki/Mind%E2%80%93body_problem}
-    % \bibliographystyle{plain}
-    % \bibliography{/home/donkarlo/Dropbox/repo/shared_research/refs/refs}
+    
+    \cite{georgiev-2020-quantum-information-theoretic-approach-to-the-mind-brain-problem}  argues that consciousness can be understood as unobservable quantum information integrated in quantum brain states. It distinguishes the private, unobservable mind from the observable brain by using the quantum distinction between states and observables. It also uses Holevo’s theorem to explain why conscious experience is only partially communicable through classical information.
+    
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
 \end{document}
