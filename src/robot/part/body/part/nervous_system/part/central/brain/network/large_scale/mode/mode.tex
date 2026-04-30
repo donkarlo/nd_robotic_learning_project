@@ -1,0 +1,83 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Large-Scale Functional Brain Networks}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    
+    Large-scale functional brain networks are distributed sets of brain regions that show coordinated activity across tasks or during rest. In the resting-state fMRI literature, these networks are also called intrinsic connectivity networks. A widely used parcellation is the seven-network organization proposed by \citet{yeo-2011-the-organization-of-the-human-cerebral-cortex}, which includes the visual network, somatomotor network, dorsal attention network, ventral attention network, limbic network, frontoparietal control network, and default mode network.
+    
+    
+    \section{Visual Network}
+        
+        The visual network is mainly associated with the processing of visual sensory information, such as shape, color, motion, and spatial structure.
+    
+    
+    \section{Somatomotor Network}
+        
+        The somatomotor network is associated with bodily sensation and motor control. It includes cortical regions involved in movement execution and somatosensory processing.
+    
+    
+    \section{Dorsal Attention Network}
+        
+        The dorsal attention network is associated with goal-directed external attention. It is active when attention is deliberately oriented toward external objects, spatial locations, or task-relevant sensory information.
+    
+    
+    \section{Ventral Attention Network}
+        
+        The ventral attention network is associated with stimulus-driven attention. It is involved when unexpected or behaviorally relevant stimuli interrupt the current focus of attention.
+    
+    
+    \section{Limbic Network}
+        
+        The limbic network is associated with emotion, valuation, motivation, and affective aspects of cognition.
+    
+    
+    \section{Frontoparietal Control Network}
+        
+        The frontoparietal control network is associated with cognitive control, task demands, working memory, decision-making, and flexible regulation of behavior. In some literature, it overlaps conceptually with the central executive network.
+    
+    
+    \section{Default Mode Network}
+        
+        The default mode network is associated with internally oriented cognition, including autobiographical memory, future thinking, self-referential processing, social cognition, and mind wandering. It was originally described as a baseline mode of brain function that is reduced during many externally demanding tasks \citep{raichle-2001-a-default-mode-of-brain-function}.
+    
+    
+    \section{Salience Network}
+        
+        The salience network is not always separated in the seven-network Yeo parcellation, where it is often close to the ventral attention network. However, in the triple-network model, it is treated as a central network for detecting behaviorally relevant events and switching between the default mode network and the central executive network \citep{menon-2011-large-scale-brain-networks-and-psychopathology,menon-2010-saliency-switching-attention-and-control}.
+    
+    
+    \section{Triple-Network Model}
+        
+        The triple-network model focuses on the interaction between the default mode network, the salience network, and the central executive network. In this view, the salience network helps regulate switching between internally oriented cognition and externally oriented cognitive control \citep{menon-2011-large-scale-brain-networks-and-psychopathology}.
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

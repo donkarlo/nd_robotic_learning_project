@@ -30,34 +30,42 @@
 
 \begin{document}
     \maketitle
+    MPC was first developed from early receding-horizon control ideas
+    \citep{propoi-1963-use-of-linear-programming-methods-for-synthesizing-sampled-data-automatic-systems} and later became prominent in industrial process control through Model Predictive
+    Heuristic Control and Dynamic Matrix Control
+    \citep{richalet-1978-model-predictive-heuristic-control-applications-to-industrial-processes,
+        cutler-1980-dynamic-matrix-control-a-computer-control-algorithm}.
+    
     is an advanced method of process control that is used to control a process while satisfying a set of constraints. \seeherefooter{https://en.wikipedia.org/wiki/Model\_predictive\_control}
     
-    \section{Cost function}
-    \[
-        J =
-        \sum_{k=0}^{N-1}
-        \left[
-            \left( x_k - x_k^{\mathrm{ref}} \right)^{T}
-            Q
-            \left( x_k - x_k^{\mathrm{ref}} \right)
-            +
-            u_k^{T} R u_k
-        \right]
-    \]
     
-    \begin{where}
-        \item[$J$] is the total cost function to be minimized.
-        \item[$k$] is the discrete time-step index.
-        \item[$N$] is the prediction horizon length.
-        \item[$x_k$] is the system state at time step $k$.
-        \item[$x_k^{\mathrm{ref}}$] is the reference state at time step $k$.
-        \item[$x_k - x_k^{\mathrm{ref}}$] is the state tracking error at time step $k$.
-        \item[$(\cdot)^T$] denotes the transpose operator.
-        \item[$Q$] is the state-error weighting matrix.
-        \item[$u_k$] is the control input at time step $k$.
-        \item[$R$] is the control-input weighting matrix.
-        \item[$u_k^T R u_k$] is the control-effort penalty.
-    \end{where}
+    \section{Cost function}
+        
+        \[
+            J =
+            \sum_{k=0}^{N-1}
+            \left[
+                \left( x_k - x_k^{\mathrm{ref}} \right)^{T}
+                Q
+                \left( x_k - x_k^{\mathrm{ref}} \right)
+                +
+                u_k^{T} R u_k
+            \right]
+        \]
+        
+        \begin{itemize}
+            \item[$J$] is the total cost function to be minimized.
+            \item[$k$] is the discrete time-step index.
+            \item[$N$] is the prediction horizon length.
+            \item[$x_k$] is the system state at time step $k$.
+            \item[$x_k^{\mathrm{ref}}$] is the reference state at time step $k$.
+            \item[$x_k - x_k^{\mathrm{ref}}$] is the state tracking error at time step $k$.
+            \item[$(\cdot)^T$] denotes the transpose operator.
+            \item[$Q$] is the weight of the state error. It determines how important the deviation of the system from the desired path or reference value is. For example, if the state includes position, velocity, and orientation, a larger weight can be assigned to position so that the controller tries harder to keep the position close to its reference value.
+            \item[$u_k$] is the control input at time step $k$.
+            \item[$R$] is the weight of the control input. It determines how costly it is to use the control command. If R is chosen to be large, the controller produces less aggressive control commands. As a result, the motion usually becomes smoother and calmer, but the trajectory-tracking error may become larger.
+            \item[$u_k^T R u_k$] is the control-effort penalty.
+        \end{itemize}
     %\bibliographystyle{plainnat}
     %\bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
 \end{document}
