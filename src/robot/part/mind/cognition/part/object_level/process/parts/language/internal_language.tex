@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Internal language}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    
+    \section{Relation with self-awareness}
+        \cite{fernyhough-2023-inner-speech-as-language-process-and-cognitive-tool} presents inner speech as an internal language process and cognitive tool involved in planning, attention, memory, emotion regulation, self-reflection, and abstract thinking. The authors argue that inner speech is not a uniform phenomenon, but appears in different forms such as dialogic, condensed, evaluative, motivational, and other-voice inner speech. A central point is that inner speech can help humans manipulate internal representations and improve cognitive performance, especially in demanding tasks. In the section on the self, the paper explains that inner speech can support self-observation, introspection, metacognition, and the formation of a coherent self-concept. However, the authors also note that inner speech may not fully explain self-awareness or self-regulation, because some evidence suggests that self-awareness itself can be a stronger explanatory factor. The review finally connects inner speech to embodied cognition, neuroscience, artificial intelligence, robotics, and brain–computer interfaces, while emphasizing the need to map different forms of inner speech to different cognitive functions.
+    
+    
+    \section{Neuronal roots of inner speach}
+        \cite{alderson-day-2016-the-brains-conversation-with-itself-neural-substrates-of-dialogic-inner-speech} uses fMRI compares dialogic inner speech, meaning inner speech shaped like a conversation, with monologic inner speech, meaning single-speaker internal speech. Dialogic inner speech produced stronger activation in a wider bilateral network, including superior temporal gyri, precuneus, posterior cingulate cortex, and inferior/medial frontal regions. The study suggests that internal dialogue is not merely silent self-talk, but also recruits social-cognitive and Theory-of-Mind-related processes, especially in the right posterior superior temporal gyrus.
+    
+    
+    \subsection{Relation with self processing}
+        \cite{molnar-szakacs-2013-self-processing-and-the-default-mode-network-interactions-with-the-mirror-neuron-system} argues that self-processing cannot be reduced to a single brain region or a homogeneous Default Mode Network. It distinguishes physical self-processing, linked more strongly to the Mirror Neuron System, from psychological self-referential processing, linked more strongly to Default Mode Network nodes such as the medial prefrontal cortex and the posterior cingulate cortex. The authors propose that the self emerges through dynamic interaction between embodied simulation and mentalizing systems.
+    
+    
+    \section{Relation with Default Mode Network}
+        \cite{menon-2023-20-years-of-the-default-mode-network-a-review-and-synthesis} reviews two decades of research on the Default Mode Network and explains how its role has expanded from a “resting-state” network to a central system for self-reference, social cognition, episodic memory, semantic memory, language, and mind wandering. The paper argues that the Default Mode Network is not a single-purpose system, but a set of interacting nodes and subnetworks whose functions depend on dynamic interactions with salience and frontoparietal control networks. Its main synthesis is that the Default Mode Network integrates memory, language, and semantic representations to construct a coherent internal narrative, which supports the sense of self and subjective continuity.
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

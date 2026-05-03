@@ -1,72 +1,93 @@
-\chapter{Language}
-    
-All branches in wikipedia
-\url{https://en.wikipedia.org/wiki/Portal:Linguistics}
-\section{Definition}
-    Language is a system of conventional symbols (spoken, written, or signed) that enables members of a community to communicate ideas, experiences, and intentions.
-    Encyclopedia Britannica
-    
-    \includegraphics[width=1\linewidth]{\figspath language_definition.png}
-    
-    
-    \subsection{Phonetics}
-    
-    
-    \subsection{Phonology}
-    
-    
-    \subsection{Morphology}
-    
-    
-    \subsection{Syntax}
-    
-    
-    \subsection{Semantics}
-    
-    
-    \subsection{Pragmatics}
+\documentclass[a4paper]{article}
 
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
 
-\section{Applied Linguistics}
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
 
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
 
-\section{Interdiciplinary}
-    
-    
-    \subsection{Psycholinguistics}
-    
-    
-    \subsection{Sociolinguistics}
-    
-    
-    \subsection{Historical Linguistics}
-    
-    
-    \subsection{Anthropological Linguistics}
-    
-    
-    \subsection{Computational Linguistics}
-    
-    
-    \subsection{Cognitive Linguistics}
-    
-    
-    \subsection{Corpus Linguistics}
-    
-    
-    \subsection{Biolinguistics}
-        How does language ability roots in body and genetics
-        Noam Chomsky "Language Faculty"
-    
-    
-    \subsection{Neurolinguistics}
-    
-    
-\section{Cognitive Neuroscience of Language}
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
 
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
 
-\section{Language Acquisition}
-    \url{https://en.wikipedia.org/wiki/Language_acquisition}
+\title{Language}
+\date{}
+
+\begin{document}
+    \maketitle
+    All branches in wikipedia
+    \url{https://en.wikipedia.org/wiki/Portal:Linguistics}
     
-%    \input{language/biological_prespective}
-%    \input{language/computational_linguistic}
+    
+    \section{Definition from Saussure prespective}
+        Language is a symbolic system that, in its most basic form, consists of sequences of replaceable components used to convey different meanings \cite{saussure-1916-course-in-general-linguistics}
+        
+        
+    \section{Definition}
+        Language is a system of conventional symbols (spoken, written, or signed) that enables members of a community to communicate ideas, experiences, and intentions.
+        Encyclopedia Britannica
+        
+        \includegraphics[width=1\linewidth]{\figspath language_definition.png}
+        
+        \subsection{Phonetics}
+        
+        \subsection{Phonology}
+        
+        \subsection{Morphology}
+        
+        \subsection{Syntax}
+        
+        \subsection{Semantics}
+        
+        \subsection{Pragmatics}
+    
+    
+    \section{Applied Linguistics}
+    
+    
+    \section{Interdiciplinary}
+        
+        \subsection{Psycholinguistics}
+        
+        \subsection{Sociolinguistics}
+        
+        \subsection{Historical Linguistics}
+        
+        \subsection{Anthropological Linguistics}
+        
+        \subsection{Computational Linguistics}
+        
+        \subsection{Cognitive Linguistics}
+        
+        \subsection{Corpus Linguistics}
+        
+        \subsection{Biolinguistics}
+            How does language ability roots in body and genetics
+            Noam Chomsky \"Language Faculty\"
+        
+        \subsection{Neurolinguistics}
+    
+    
+    \section{Cognitive Neuroscience of Language}
+    
+    
+    \section{Language Acquisition}
+        \url{https://en.wikipedia.org/wiki/Language_acquisition}
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

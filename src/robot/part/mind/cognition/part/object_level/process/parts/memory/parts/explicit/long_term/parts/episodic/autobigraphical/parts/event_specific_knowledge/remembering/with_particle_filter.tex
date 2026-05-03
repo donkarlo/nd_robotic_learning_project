@@ -1,0 +1,62 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Particle filter application in remebering/recalling}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    
+    \section{In human}
+        \cite{socher-2009-a-bayesian-analysis-of-dynamics-in-free-recall} proposes LDA-TCM, a probabilistic model of free recall that combines the Temporal Context Model with latent Dirichlet allocation. It treats recall as inference over a drifting latent mental context, where remembered words are retrieved through both semantic and episodic paths. The authors use a particle filter for approximate posterior inference and show that the mixed semantic-episodic model predicts recall sequences better than purely semantic or purely episodic alternatives.
+        
+        \subsection{in human hippocampus}
+            The hippocampus is mainly involved in forming and retrieving memories, especially episodic and associative memories, and in spatial navigation. In this paper, it is modeled as a Bayesian filtering system that combines memory retrieval and navigation in one mechanism.
+            
+            \cite{fox-2010-learning-in-a-unitary-coherent-hippocampus} extends the UCPF-HC(The name of their model) model, which treats the hippocampus as a unitary coherent particle filter combining associative memory and spatial navigation.
+            The authors propose an online learning mechanism for CA3 connections, linking hippocampal learning to a temporal restricted Boltzmann machine and wake-sleep learning during theta cycles.
+            The model suggests that CA3 can learn useful latent representations for denoising and state estimation, while the biological role of ADP and acetylcholine remains a hypothesis.
+    
+    
+    \section{In robotics}
+        \cite{ueda-2019-particle-filter-on-episode} proposes Particle Filter on Episode (PFoE), an algorithm that applies a particle filter to a recorded sequence of robot actions and sensor readings. The recorded sequence is called an episode, inspired by episodic memory, and is used to find situations similar to the robot’s current situation. Experiments with a small mobile robot show that PFoE can replay taught behaviors and recover from skids or interruptions without a separate learning phase.
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

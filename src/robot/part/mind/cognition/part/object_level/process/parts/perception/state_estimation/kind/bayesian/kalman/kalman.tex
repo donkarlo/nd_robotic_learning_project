@@ -1,0 +1,299 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Kalman Filter Equations}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    The Kalman filter estimates the hidden state of a linear dynamical system from noisy measurements. It assumes that both the process noise and the measurement noise are Gaussian \cite{kalman-1960-a-new-approach-to-linear-filtering-and-prediction-problems}.
+    
+    
+    \section{State-Space Model}
+        
+        The system is usually written as:
+        
+        \[
+            x_k = A_k x_{k-1} + B_k u_k + w_k
+        \]
+        
+        \[
+            z_k = H_k x_k + v_k
+        \]
+        
+        where:
+        
+        \[
+            x_k
+        \]
+        
+        is the hidden state of the system at time step \(k\).
+        
+        \[
+            z_k
+        \]
+        
+        is the measurement or observation at time step \(k\).
+        
+        \[
+            u_k
+        \]
+        
+        is the control input.
+        
+        \[
+            A_k
+        \]
+        
+        is the state transition matrix, which describes how the previous state moves to the current state.
+        
+        \[
+            B_k
+        \]
+        
+        is the control-input matrix.
+        
+        \[
+            H_k
+        \]
+        
+        is the observation matrix, which maps the hidden state into the measurement space.
+        
+        \[
+            w_k
+        \]
+        
+        is the process noise, usually assumed to be Gaussian:
+        
+        \[
+            w_k \sim \mathcal{N}(0, Q_k)
+        \]
+        
+        \[
+            v_k
+        \]
+        
+        is the measurement noise, also usually assumed to be Gaussian:
+        
+        \[
+            v_k \sim \mathcal{N}(0, R_k)
+        \]
+        
+        Here, \(Q_k\) is the process-noise covariance matrix, and \(R_k\) is the measurement-noise covariance matrix.
+    
+    
+    \section{Prediction Step}
+        
+        In the prediction step, the filter predicts the next state before seeing the new measurement.
+        
+        The predicted state is:
+        
+        \[
+            \hat{x}_{k|k-1} = A_k \hat{x}_{k-1|k-1} + B_k u_k
+        \]
+        
+        The predicted covariance is:
+        
+        \[
+            P_{k|k-1} = A_k P_{k-1|k-1} A_k^T + Q_k
+        \]
+        
+        where:
+        
+        \[
+            \hat{x}_{k|k-1}
+        \]
+        
+        is the predicted state at time \(k\), based only on information available up to time \(k-1\).
+        
+        \[
+            P_{k|k-1}
+        \]
+        
+        is the predicted uncertainty of this state estimate.
+        
+        \[
+            P_{k-1|k-1}
+        \]
+        
+        is the previous corrected covariance.
+    
+    
+    \section{Innovation}
+        
+        After the measurement \(z_k\) arrives, the filter computes the difference between the actual measurement and the predicted measurement.
+        
+        This difference is called the innovation or residual:
+        
+        \[
+            y_k = z_k - H_k \hat{x}_{k|k-1}
+        \]
+        
+        The innovation covariance is:
+        
+        \[
+            S_k = H_k P_{k|k-1} H_k^T + R_k
+        \]
+        
+        where \(y_k\) tells us how much the real measurement differs from what the model expected.
+    
+    
+    \section{Kalman Gain}
+        
+        The Kalman gain decides how much the filter should trust the new measurement compared with the model prediction.
+        
+        \[
+            K_k = P_{k|k-1} H_k^T S_k^{-1}
+        \]
+        
+        or equivalently:
+        
+        \[
+            K_k = P_{k|k-1} H_k^T
+            \left(
+                H_k P_{k|k-1} H_k^T + R_k
+            \right)^{-1}
+        \]
+        
+        If the measurement noise \(R_k\) is large, the Kalman gain becomes smaller, so the filter trusts the model more.
+        
+        If the predicted uncertainty \(P_{k|k-1}\) is large, the Kalman gain becomes larger, so the filter trusts the measurement more.
+    
+    
+    \section{Correction Step}
+        
+        The corrected state estimate is:
+        
+        \[
+            \hat{x}_{k|k} =
+            \hat{x}_{k|k-1} + K_k y_k
+        \]
+        
+        or:
+        
+        \[
+            \hat{x}_{k|k} =
+            \hat{x}_{k|k-1} +
+            K_k
+            \left(
+                z_k - H_k \hat{x}_{k|k-1}
+            \right)
+        \]
+        
+        The corrected covariance is:
+        
+        \[
+            P_{k|k} =
+            \left(
+                I - K_k H_k
+            \right)
+            P_{k|k-1}
+        \]
+        
+        where:
+        
+        \[
+            \hat{x}_{k|k}
+        \]
+        
+        is the updated state estimate after using the measurement at time \(k\).
+        
+        \[
+            P_{k|k}
+        \]
+        
+        is the updated uncertainty after the correction step.
+    
+    
+    \section{Compact Form}
+        
+        The Kalman filter can be summarized in two main phases.
+        
+        First, prediction:
+        
+        \[
+            \hat{x}_{k|k-1} = A_k \hat{x}_{k-1|k-1} + B_k u_k
+        \]
+        
+        \[
+            P_{k|k-1} = A_k P_{k-1|k-1} A_k^T + Q_k
+        \]
+        
+        Second, correction:
+        
+        \[
+            K_k =
+            P_{k|k-1} H_k^T
+            \left(
+                H_k P_{k|k-1} H_k^T + R_k
+            \right)^{-1}
+        \]
+        
+        \[
+            \hat{x}_{k|k} =
+            \hat{x}_{k|k-1}
+            +
+            K_k
+            \left(
+                z_k - H_k \hat{x}_{k|k-1}
+            \right)
+        \]
+        
+        \[
+            P_{k|k} =
+            \left(
+                I - K_k H_k
+            \right)
+            P_{k|k-1}
+        \]
+    
+    
+    \section{Interpretation}
+        
+        The Kalman filter is a recursive estimator.
+        It does not need the full history of measurements.
+        At each time step, it only needs the previous estimate, the previous covariance, the current control input, and the current measurement.
+        
+        The prediction step answers:
+        
+        \[
+            \text{What do I expect the state to be before seeing the new measurement?}
+        \]
+        
+        The correction step answers:
+        
+        \[
+            \text{How should I modify that expectation after seeing the new measurement?}
+        \]
+        
+        The covariance matrix \(P\) represents uncertainty about the state estimate.
+        The matrices \(Q\) and \(R\) control how uncertainty enters the system: \(Q\) describes uncertainty in the system dynamics, while \(R\) describes uncertainty in the sensor measurements.
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

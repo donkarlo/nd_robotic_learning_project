@@ -1,0 +1,110 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{}
+\date{}
+
+\begin{document}
+    \maketitle
+    
+    \cite{gordon-1993-novel-approach-to-nonlinear-non-gaussian-bayesian-state-estimation} introduced particle filter as a sequential Monte Carlo method used to estimate the hidden state of a dynamic system from noisy observations.
+    
+    Assume that the hidden state at time $t$ is $x_t$ and the observation is $y_t$.
+    
+    \begin{align}
+        x_t &\sim p(x_t \mid x_{t-1}) \\
+        y_t &\sim p(y_t \mid x_t)
+    \end{align}
+    
+    The first equation describes how the state changes over time.
+    The second equation describes how the observation is generated from the hidden state.
+    
+    Instead of representing the posterior distribution exactly,
+    
+    \begin{equation}
+        p(x_t \mid y_{1:t})
+    \end{equation}
+    
+    a particle filter approximates it using many weighted samples, called particles:
+    
+    \begin{equation}
+        p(x_t \mid y_{1:t}) \approx \sum_{i=1}^{N} w_t^{(i)} \delta(x_t - x_t^{(i)})
+    \end{equation}
+    
+    where $x_t^{(i)}$ is the $i$-th particle, $w_t^{(i)}$ is its weight, and $N$ is the number of particles.
+    
+    At each time step, the algorithm has three main steps.
+    
+    
+    \section{Prediction}
+        
+        Each particle is moved forward using the state transition model:
+        
+        \begin{equation}
+            x_t^{(i)} \sim p(x_t \mid x_{t-1}^{(i)})
+        \end{equation}
+    
+    
+    \section{Update}
+        
+        Each particle receives a weight according to how well it explains the new observation:
+        
+        \begin{equation}
+            w_t^{(i)} \propto p(y_t \mid x_t^{(i)})
+        \end{equation}
+        
+        Then the weights are normalized:
+        
+        \begin{equation}
+            w_t^{(i)} =
+            \frac{w_t^{(i)}}{\sum_{j=1}^{N} w_t^{(j)}}
+        \end{equation}
+    
+    
+    \section{Resampling}
+        
+        Particles with large weights are copied more often, and particles with small weights are removed.
+        
+        \begin{equation}
+            \{x_t^{(i)}, w_t^{(i)}\}_{i=1}^{N}
+            \rightarrow
+            \{\tilde{x}_t^{(i)}, \frac{1}{N}\}_{i=1}^{N}
+        \end{equation}
+        
+        After resampling, all particles have equal weight again.
+    
+    
+    \section{Simple Interpretation}
+        
+        A particle filter represents belief about the hidden state by many guesses.
+        Each guess is tested against the new observation.
+        Good guesses survive, and bad guesses disappear.
+        Over time, the cloud of particles follows the probable state of the system.
+        
+        \bibliographystyle{plainnat}
+        \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

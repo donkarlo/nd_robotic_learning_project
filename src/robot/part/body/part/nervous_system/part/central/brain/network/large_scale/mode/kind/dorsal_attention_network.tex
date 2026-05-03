@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Dorsal attention network}
+\date{}
+
+\begin{document}
+    \maketitle
+    \seeherefooter{}
+    \cite{corbetta-2002-control-of-goal-directed-and-stimulus-driven-attention-in-the-brain} distinguishes two interacting attention systems in the human brain: a dorsal frontoparietal system for goal-directed/top-down attention and a ventral system for stimulus-driven reorienting. The dorsal system, including frontal eye fields and intraparietal/superior parietal regions, is active when attention is voluntarily directed according to current goals. The paper is useful because it gives the classical framework for separating intentional attention from attention captured by unexpected or salient stimuli.
+    
+    \cite{vossel-2014-dorsal-and-ventral-attention-systems} updates the dorsal/ventral attention distinction and emphasizes that the two systems are anatomically distinct but functionally cooperative. The dorsal attention system supports controlled spatial attention and task-based selection, while the ventral system helps detect behaviorally relevant events and redirect attention. The paper is useful because it presents a more modern view: attention is not simply split into two isolated networks, but depends on interaction between them.
+    
+    \cite{corbetta-2008-the-reorienting-system-of-the-human-brain-from-environment-to-theory-of-mind} explains the human brain’s reorienting system, especially the right-lateralized ventral frontoparietal network, which helps redirect attention toward behaviorally relevant unexpected stimuli. It distinguishes this ventral network from the dorsal attention network: the dorsal network maintains goal-directed attention, while the ventral network interrupts or resets ongoing activity when important new events appear. The paper also extends the role of the ventral attention network beyond simple environmental attention, linking it to network switching, internally directed thought, and theory-of-mind cognition.
+    
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}
