@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Multi rate sensors temporal alignment with with interpolation}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+    \maketitle
+    \cite{babu-2005-comparative-study-of-interpolation-techniques-for-ultra-tight-integration-of-gps-ins-pl-sensors} study interpolation techniques for ultra-tight GPS/INS/Pseudolite integration. The problem is that the navigation filter usually runs at a low rate, typically between 1 and 100 Hz, while the GPS carrier tracking loop requires updates at about 1000 Hz. Running the Kalman filter at 1000 Hz would be computationally expensive, so the authors adopt an interpolation-based solution. Their method increases the sampling rate of low-rate INS-derived Doppler measurements using multirate signal processing. They compare Polyphase and CIC interpolators and report that CIC is computationally simpler because it avoids multipliers and gives better preliminary performance in their experiment.
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

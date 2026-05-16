@@ -1,0 +1,44 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Spline interpolation}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+\maketitle
+    \seeherefooter{https://en.wikipedia.org/wiki/Spline_interpolation}
+    
+    \cite{lovegrove-2013-spline-fusion-a-continuous-time-representation-for-visual-inertial-fusion-with-application-to-rolling-shutter-cameras} propose a continuous-time spline-based framework for visual-inertial SLAM and calibration. Instead of representing the sensor trajectory only at discrete timestamps, they model it as a continuous curve using cubic B-splines. This allows measurements from unsynchronized and high-rate sensors, such as cameras and IMUs, to be fused in a common temporal framework. The method is also useful for rolling-shutter cameras, because each image scanline can be associated with its own measurement time.
+
+
+
+
+
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}
