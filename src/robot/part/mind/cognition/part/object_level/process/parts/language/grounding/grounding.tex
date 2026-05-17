@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+    \maketitle
+    \cite{cohen-2024-a-survey-of-robotic-language-grounding-tradeoffs-between-symbols-and-embeddings} reviews robotic language grounding as a tradeoff between symbolic/formal representations and neural embedding-based approaches. Formal methods offer interpretability, lower data needs, and stronger safety guarantees, while end-to-end embedding methods offer flexibility but require more data and computation. The paper argues that future robotic language grounding should combine both: structured symbols for safety and reasoning, plus learned multimodal representations for generalization.
+    
+    
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

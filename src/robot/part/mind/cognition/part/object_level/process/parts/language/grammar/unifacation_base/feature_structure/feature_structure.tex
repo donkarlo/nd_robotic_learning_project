@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Feature structure (trace)}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+    \maketitle
+    \seeherefooter{https://en.wikipedia.org/wiki/Feature_structure}
+    \cite{kay-1984-functional-unification-grammar} defines ``Feature structure`` as a functional description of a linguistic object. It is built from features, where each feature consists of an attribute and an associated value. A value may be atomic, or it may itself be another functional description, so the structure can be nested. Functional descriptions are combined by unification when they are compatible.
+    
+    Feature structures \cite{kasper-1986-a-logical-semantics-for-feature-structures} represent linguistic objects as sets of attribute--value pairs. Kasper and Rounds formalize feature-structure descriptions as logical formulas interpreted by directed graphs.
+    Their model explains unification and shows how disjunction and non-local path values increase computational complexity.
+    
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass[a4paper]{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{minted}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{forest}
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{xparse}
+\usepackage{natbib}
+
+\usetikzlibrary{graphs,graphdrawing}
+\usegdlibrary{layered}
+
+% for external graphviz
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/external_graphviz.tex}
+
+% for tags
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/parts/control_sequence/kind/semtag/semtag.tex}
+
+% for links
+\input{/home/donkarlo/Dropbox/repo/nd_ai_project/src/nd_ai/knoweldge_representation/language/formal/computer/programming/tex/latex/code_clips/seehere.tex}
+
+\title{Functional unification-based grammar}
+\date{}
+\author{Mohammad Rahmani}
+
+\begin{document}
+    \maketitle
+    \cite{kay-1984-functional-unification-grammar} introduces Functional Unification Grammar (FUG) as a single monotonic formalism for representing linguistic descriptions in machine translation. Linguistic objects are represented as functional descriptions composed of attribute--value features, and compatible descriptions are combined through unification. Because FUG treats analysis, transfer, and synthesis within the same reversible framework, a translation from language A to language B should also support the reverse relation from B to A. A
+    
+    \cite{kay-1984-functional-unification-grammar} defines ``Feature structure`` as a functional description of a linguistic object. It is built from features, where each feature consists of an attribute and an associated value. A value may be atomic, or it may itself be another functional description, so the structure can be nested. Functional descriptions are combined by unification when they are compatible.
+    \bibliographystyle{plainnat}
+    \bibliography{/home/donkarlo/Dropbox/repo/nd_shared_research/bibliography/bibliography.bib}
+\end{document}
